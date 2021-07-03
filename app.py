@@ -15,7 +15,7 @@ from resources.item import Item, ItemList
 app = Flask(__name__)
 
 DATABASE_URL = os.environ.get("DATABASE_URL", "sqlite:///data.db")
-if DATABASE_URL.startswith("postgres"):
+if DATABASE_URL.startswith("postgres://"):
     DATABASE_URL = "postgresql" + DATABASE_URL.removeprefix("postgres")
 
 app.config["SQLALCHEMY_DATABASE_URI"] = DATABASE_URL
