@@ -38,6 +38,7 @@ api.add_resource(UserRegister, "/register")
 api.add_resource(Store, "/store/<string:name>")
 api.add_resource(StoreList, "/stores")
 
+api.add_resource(UserRegister, '/register')
 
 @app.errorhandler(JWTError)
 def auth_error_handler(error):

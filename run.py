@@ -1,5 +1,3 @@
-import os
-
 from db import db
 from app import app
 
