@@ -14,7 +14,7 @@ from db import db
 app = Flask(__name__)
 app.config['DEBUG'] = True
 
-DATABASE_URL = os.environ.get("DATABASE_URL", "sqlite:///data.db")
+DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///data.db")
 if DATABASE_URL.startswith("postgres://"):
     uri = DATABASE_URL.replace("postgres://", "postgresql://", 1)
 
