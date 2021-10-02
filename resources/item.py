@@ -26,15 +26,15 @@ class Item(Resource):
             try:
                 item.save_to_db()
             except:
-                return {"message": "An error occurred inserting the item."}, 500
+                return {"message": "An error occurred inserting the item"}, 500
             return item.json(), 201
-        return {"message": "Store with that id doesn't exist."}
+        return {"message": "Store with that id doesn't exist"}
 
     def delete(self, name):
         item = ItemModel.find_by_name(name)
         if item:
             item.delete_from_db()
-        return {"message": "Item deleted."}
+        return {"message": "Item deleted"}
 
     def put(self, name):
         data = Item.parser.parse_args()
