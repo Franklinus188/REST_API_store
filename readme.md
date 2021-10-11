@@ -3,3 +3,6 @@
 This is built with Flask, Flask-RESTful, Flask-JWT and Flask-SQLAlchemy.
 
 Deployed on Heroku.
+
+Documentation
+https://documenter.getpostman.com/view/14724067/UV5Rnfne
